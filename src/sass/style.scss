@@ -1,0 +1,142 @@
+@import "reset.scss";
+
+$color-font: #434852;
+$color-bg: #343843;
+$color-primary: #ff3b30;
+$color-secondary: #8b93a3;
+$color-warning: #ff3b30;
+
+
+html {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-bg;
+  flex-direction: column;
+
+  button, img {
+    width: 30vw;
+    min-width: 6.6em;
+  }
+
+  img {
+    height: auto;
+    margin-bottom: 2em;
+    min-width: 12em;
+  }
+
+  button {
+    height: 10vh;
+    min-height: 2.6em;
+    max-height: 3em;
+    font-size: 1.5em;
+    background-color: $color-bg;
+    border: 0.1em solid $color-primary;
+    color: $color-primary;
+    border-radius: 0.2em;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover {
+      background-color: $color-primary;
+      color: #fff;
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+
+}
+.pop-up {
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  box-sizing: border-box;
+  display: none;
+  opacity: 0;
+  width: 60vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  background-color: #fff;
+  flex-direction: column;
+  padding: 2em;
+  i.icon-close {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    display: block;
+    color: $color-secondary;
+    font-size: 1.4em;
+  }
+  i.icon-warning {
+    cursor: pointer;
+    display: block;
+    color: $color-warning;
+    font-size: 8em;
+    margin-bottom: 1.6rem;
+  }
+  p {
+    text-align: center;
+    color: $color-font;
+    font-size: 1.4em;
+    line-height: 1.4;
+    margin-bottom: 1.6rem;
+  }
+  .btn-block {
+    display: flex;
+    width: 100%;
+    max-width: 40em;
+  }
+  button {
+    margin: 0 .5rem;
+    width: 100%;
+    padding: .6vw 2rem;
+    text-align: center;
+    font-size: 1em;
+    &:focus {
+      outline: 0;
+    }
+    &.cancel {
+      background: none;
+      border: 0.1em solid $color-secondary;
+      color: $color-secondary;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all .3s;
+    }
+    &.confirm-uninstall {
+      background: $color-primary;
+      border: 0;
+      border-bottom: 0.1em solid $color-primary;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all .3s;
+    }
+  }
+
+}
+.overlay {
+  z-index: 3;
+  position: fixed;
+  background-color: #000;
+  opacity: .5;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+}
+
+@import "variables.scss";
+@import "font.scss";
