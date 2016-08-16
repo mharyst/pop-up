@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     cssmin = require('gulp-minify-css'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
+    ghPages = require('gulp-gh-pages'),
     reload = browserSync.reload;
     var path = {
         dist: {
@@ -131,6 +132,11 @@ gulp.task('webserver', function () {
 
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('default', ['build', 'webserver', 'watch']);
