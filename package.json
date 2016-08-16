@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple pop-up",
   "main": "index.js",
-  "author": "",
+  "author": "mharyst",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.14.0",
