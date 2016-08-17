@@ -14,7 +14,7 @@ $(document).ready(function() {
 //Close Pop Up
 function closePopUp() {
 $('#pop_up')
-  .animate({opacity: 0, top: '10%'}, 200,
+  .animate({opacity: 0, top: '15%'}, 200,
     function() {
       $(this).css('display', 'none');
       $('#overlay').fadeOut(50);
@@ -27,6 +27,4 @@ $('#pop_up button.cancel, #pop_up_close, #overlay').click(closePopUp);
 $('#pop_up button.confirm-uninstall').click( function() {
   alert("Done!");
   closePopUp();
-  // setTimeout(function(){
-  // }, 2000);
 });
