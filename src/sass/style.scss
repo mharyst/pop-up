@@ -6,6 +6,9 @@ $color-primary: #ff3b30;
 $color-secondary: #8b93a3;
 $color-warning: #ff3b30;
 
+$screen-xs: 400px;
+$screen-sm: 600px;
+
 
 html {
   font-size: 16px;
@@ -68,6 +71,16 @@ html {
   background-color: #fff;
   flex-direction: column;
   padding: 2em;
+  transition: all .2s;
+  @media screen and (max-width: $screen-sm) {
+    margin-top: -15%;
+    left: 10%;
+    width: 80vw;
+  }
+  @media screen and (max-width: $screen-xs) {
+    margin-top: -28%;
+    padding: 1.8em;
+  }
   i.icon-close {
     position: absolute;
     top: 1rem;
@@ -95,13 +108,25 @@ html {
     display: flex;
     width: 100%;
     max-width: 40em;
+    @media screen and (max-width: $screen-sm) {
+      flex-direction: column;
+    }
   }
   button {
     margin: 0 .5rem;
     width: 100%;
-    padding: .6vw 2rem;
+    padding: .8vw 2rem;
     text-align: center;
     font-size: 1em;
+    @media screen and (max-width: $screen-sm) {
+      margin-bottom: 1em;
+    }
+    @media screen and (max-width: $screen-xs) {
+      padding: 3vw 0;
+      font-size: 1.2em;
+      margin: 0;
+      margin-bottom: 1em;
+    }
     &:focus {
       outline: 0;
     }
